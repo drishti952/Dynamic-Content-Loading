@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Loading</title>
+    <script type="text/javascript">
+        function book(title, price) {
+            this.title = title;
+            this.price = price;
+        } 
+    </script>
+</head>
+
+<body>
+    <input id="title" type="text" placeholder="Enter book title">
+    <input id="price" type="number" placeholder="Enter book price">
+    <button onclick="createBook()">Create Book</button>
+
+    <script type="text/javascript">
+        function createBook() {
+            var title = document.getElementById("title").value;
+            var price = parseFloat(document.getElementById("price").value);
+            var myBook = new book(title, price);
+            document.write("Book title is :" + myBook.title + "<br>");
+            document.write("Book price is :" + myBook.price + "<br>");
+        }
+    </script>
+</body>
+
+</html>
